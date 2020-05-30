@@ -17,9 +17,9 @@
       <h2>To do:</h2>
       <ul>
         <li v-for="(task, index) in tasks" v-on:click="task.done=true">
-          {{ task.type }}
+          {{ task.type }} {{ task.done? '✔️':'❌' }}
           <!-- <p>Hotovo: {{task.done}}</p> -->
-          <p>Hotovo: {{ task.done? '✔️':'❌' }}</p>
+          <!-- <p>Hotovo: {{ task.done? '✔️':'❌' }}</p> -->
         </li>
       </ul>
     </div>
