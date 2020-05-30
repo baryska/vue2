@@ -42,7 +42,6 @@ new Vue({
     }
     ],
     newTask: '',
-    tick: ''
   },
 
   methods: {
