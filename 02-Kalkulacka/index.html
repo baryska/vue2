@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kalkulačka</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <h1>Kalkulačka</h1>
+    <div id="app">
+      <label
+        ><input type="number" v-model.number="cislo1" placeholder="0" /> Zadej
+        první číslo</label
+      >
+      <br />
+      <br />
+      <label
+        ><input type="number" v-model.number="cislo2" placeholder="0" /> Zadej
+        druhé číslo</label
+      >
+      <br />
+      <br />
+      <select v-model="metoda">
+        <option value="plus">Sčítání</option>
+        <option value="minus">Odčítání</option>
+        <option value="multiply">Násobení</option>
+        <option value="devide">Dělení</option>
+      </select>
+      <br />
+      <br />
+      Výsledek: {{selectedMethod}}
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nákupní seznam</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <h1>Úkolníček</h1>
+
+    <div id="app">
+      <label>Zadej úkol: <input type="text" v-model.trim="newTask"/></label>
+      <button v-on:click="addTask">Přidej do seznamu</button>
+      <h2>To do:</h2>
+      <ul>
+        <li v-for="(task, index) in tasks" v-on:click="task.done=true">
+          {{ task.type }}
+          <!-- <p>Hotovo: {{task.done}}</p> -->
+          <p>Hotovo: {{ task.done? '✔️':'❌' }}</p>
+        </li>
+      </ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
